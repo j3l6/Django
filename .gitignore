@@ -1,0 +1,17 @@
+# Ignorar
+my_env/
+
+# Archivos compilados y caché de Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Base de datos SQLite
+db.sqlite3
+
+
+*.log
+
+# Carpetas de configuración de editores
+.idea/
+.vscode/
