@@ -12,12 +12,12 @@ def post_list(request):
 def post_detail(request, id):
     try:
         post = Post.published.get(id=id)
-    except Post.DoesNotExiste:
+    except Post.DoesNotExist:
         raise Http404("No Post found :(.")
     return render(
         request,
-        'blog/post/list.html',
-        {'posts':posts}
+        'blog/post/detail.html',
+        {'post':post}
     )
 # Create your views here.
 
