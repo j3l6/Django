@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 
 # Create your models here.
 
@@ -43,3 +44,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
         
+    def get_absolute_url(self):
+        return reverse("blog:post_detail",  #build URL dynamically based on URL in URL patterns
+        args=[self.id]
+        )
